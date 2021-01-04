@@ -172,7 +172,7 @@ You need to include the options provided in the Directory-tag in order to grant 
 
 ### 2.3. Include \*.conf - files in Apache httpd.conf
 
-Finally you need to connect the locally configured domains to the apache server by including the host-configuration data files in 'httpd.confÄ
+Finally you need to connect the locally configured domains to the apache server by including the host-configuration data files in 'httpd.conf'
 Under the tag '# Virtual hosts' please modify the file in the following way:
 
 ```
