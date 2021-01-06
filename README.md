@@ -54,7 +54,23 @@ brew install php@7.2
 
 Annotation: Only PHP versions > 7.2 are officialy supported by homebrew.
 
-### 1.4. Install XDebug
+### 1.4 Link downloaded PHP version and Apache-Server
+To make apache run the downloaded php version, you need to modify the configuration file that is rooted here: 
+```
+/private/etc/apache2/httpd.conf
+```
+The module file for the downloaded php-version is stored here: 
+```
+/usr/local/opt/php@X.X/lib/httpd/modules/libphp7.so
+```
+
+To link the php-version, you need to modify the httpd.conf in the following way:
+```
+#LoadModule php7_module libexec/apache2/libphp7.so
+Load Module php7_module /usr/local/opt/php@X.X/lib/httpd/modules/libphp7.so
+```
+
+### 1.5. Install XDebug
 
 Xdebug is an extension for PHP to assist with debugging and development.
 See https://xdebug.org/ for further information and an installation-guide.
